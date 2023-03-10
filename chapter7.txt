@@ -1,0 +1,309 @@
+--Reading-Files--
+
+-File-Processing-
+
+*A text file can be thought of as a squence of lines
+
+From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
+Rerturn-Path: <postmaster@collab.sakaiproject.org>
+Date: Sat, 5 Jan 2008 09:12:18 -0500
+To: source@collab.sakaiproject.org
+From : stephen.marquard@uct.ac.za
+Subject: [sakai] svn commit: r39772 - content/branches/
+
+Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
+
+-Opening-a-File-
+
+*Before we can read the contents of the file, we must tell Python which file we are going to work wiht and what we will be doing with the file
+
+*This is done with the open()function
+
+*open() returns a "file handle" - a variable used to perform opeations on the file
+
+*Similar to "File ->Open" in a Word Processor
+
+-Using-open-
+
+* handel=open(filename, mode)
+  fhand=open("mbox.txt",'r')
+
+* returns a handle use to manipulate the file
+
+*filename is a string
+
+*mode is optional and should be 'r' if we are planning to read the file and 'w' if we are going to write to the file
+
+-What-is-a-Handle?-
+
+fhand = open('mbos.txt')
+print(fhand)
+--------------
+              |
+open  -       |             mbox.txt
+write - -  [handle] <-> [From stephen...]
+close -       | 
+              |
+Yout program---
+
+handle = is a method could we can get the output of the file as the function(open,write,close)
+
+fhand = open('mbox.txt')
+print(fhand)
+<_io.TextIOWrapper name='mbox.txt' mode='r' encoding='UTF-8'>
+
+-When-Files-are-Missing-
+
+print("What is a Handle?")
+
+fhand = open('mbox.txt')
+print(fhand)
+
+fhand = open('stuff.txt')
+
+Traceback (most recent call last):
+  File "chapter7.py", line 6, in <module>
+    fhand = open('stuff.txt')
+FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
+Traceback (most recent call last):
+  File "chapter7.py", line 6, in <module>
+    fhand = open('stuff.txt')
+FileNotFoundError: [Errno 2] No such file or directory: 'stuff.txt'
+
+-The-newline-Character-
+
+*We use a special character called the "newline" to indicate when a line ends
+
+*We represent it as "\n\ in strings
+
+*"Newline" is still one character - not two
+
+
+///////////////////////////
+
+stuff = 'Hello\nWorld!'
+#stuff
+print(stuff)
+stuff = 'X\nY'
+print(stuff)
+print(len(stuff)) --> the function len determine which kind of characters are inside the variable stuff and \n = the new line character is also considerate as character
+
+//////////////////////
+Hello
+World!
+X
+Y
+3
+
+-File-Processing-
+
+A test has "newlines" at the end of each line
+
+From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008\n
+Rerturn-Path: <postmaster@collab.sakaiproject.org>\n
+Date: Sat, 5 Jan 2008 09:12:18 -0500\n
+To: source@collab.sakaiproject.org\n
+From : stephen.marquard@uct.ac.za\n
+Subject: [sakai] svn commit: r39772 - content/branches/\n
+Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772\n
+
+Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772\n
+
+--Reading-Files-in-Python--
+
+-File-Handle-as-a-Sequence-
+
+*A "file handle" opoen for read can be treated as a "sequence" of strings where each line in the file is a string in the sequence
+
+*We can use the "for" statemente ton iterate through a "sequence"
+
+*Remeber - a "sequence" is an ordered set
+
+xfile = open('mbox.txt')
+for cheese in xfile: --> read the strings of the files 
+    print(cheese) --> print the strings of the files
+
+-Counting-Lines-in-a-File-
+
+*Open a "file" read-only
+
+*Use a "for" loop to read each line 
+
+*"Count" the lines and print out the number of lines
+
+fhand = open('mbox.txt') -->
+count = 0 --> counter
+for line in fhand: --> variable line until the var(fha)
+    count = count + 1 --> the counter to read the file
+print('Line Count:', count) ---> print the file count
+
+///////////////
+
+Line Count: 6
+
+--Reading-the-*Whole*-File--
+
+*We can read the whole file (newline adn all) into a "single string"
+
+>>> fhand = open('mbox.short.txt') --> we open it
+>>> inp = fhand.read() -->read the fhand(all the mbox.short.txt) and put the block and string in inp, and that why is reading a new line, a new line,etc. And you can spot that  into separate lines if you want
+>>> print(len(inp)) --> And after that we are going to use it in the len function and the len function says the file has 94626 characters 
+94626
+>>> print(inp[:20]) --> And print the first 20  characters inside the inp variable (: -> shows the first, 20 -> charcters 
+From stepen.marquar
+
+
+-Seaching-through-a-file-
+
+*We can put an "if" statment in out "for" loop to only print lines that meet some criteria
+
+
+fhand = open("mbox.txt") --> use the function inside the variable mbox.txt
+for line in fhand: --> line = 0 until fhand concludes and the counter if the counter doesn't find the charcter or characters get out of the loop and ends
+    if line.startswith('From:'): if the line.starts with From print line
+        print(line) --> if we are going to see the code it self have a /n(new line) and prints separetes  two newlines as "From: stephen.marquard@uct.ac.za\n"
+            \n
+
+///////////////////////////////
+
+From: stephen.marquard@uct.ac.za
+
+-OOPS!-
+
+*What are all these blank lines doing here?
+
+From: stephen.marquard@uct.ac.za
+
+From: louis@media.bekeley.edu
+
+From: rjlowe@iupi.edu
+
+From: zqian@umich.edu
+
+...
+
+*Each line from the file has a "newline" at the end
+
+*The "print" statement addsd a "newline" to each line
+
+From: stephen.marquard@uct.ac.za\n
+\n
+From: louis@media.bekeley.edu\n
+\n
+From: rjlowe@iupi.edu\n
+\n
+From: zqian@umich.edu\n
+\n
+
+...
+
+--Searching-through-a-File-(fixed)--
+
+*We can strip the whitespace from the right-hand side of the string using rstrip() from the string library
+
+*The newline is considered "white space" and is "stripped"
+
+fhand = open("mbox-short.txt")
+for line in fhand:
+    line = line.rstrip() --> the right-hand stripped
+    if line.startswith('From:') :
+       print(line)
+
+/////////////////////////
+
+From: stephen.marquard@uct.ac.za
+From: louis@media.bekeley.edu
+From: rjlowe@iupi.edu
+From: zqian@umich.edu
+
+-Skipping-with-continue-
+
+*We can conviently skip a line by using the "continue" statement
+
+fhand = open('mbox-short.txt')--> its the same as the previous example
+for line in fhand: --> same as previous example
+    line = line.rstrip()
+    if not line.startswith('From:') : --> if
+        continue --> its the line is not in the code is going to continue as a skipping pattern and if we find a line is true are going to print the line
+    print(line)
+
+/////////////////////
+
+From: stephen.marquard@uct.ac.za
+From: louis@media.bekeley.edu
+From: rjlowe@iupi.edu
+From: zqian@umich.edu
+
+
+-Using-in-yo-select-lines
+
+*We can look fo a string anywhere "in" a "line" as our selection criteria
+
+
+fhand = open('mbox-short.txt')--> variable open
+for line in fhand: --> enter to the loop
+    line = line.rstrip() --> line with rstrip
+    if not '@uct.ac.za' in line : --> if using @uct.ac.za is not in the line... 
+        continue --> skipped
+    print(line) --> print if the "@uct.ac.za" is in the line
+///////////////////////////////
+
+From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
+From: stephen.marquard@uct.ac.za
+
+-Prompt-for-File-Name-
+
+fname = input('Enter the file name: ') --> the user give the input of the file name 
+fhand = open(fname) --> the string is now in the open function
+count = 0 --> the count
+for line in fhand: --> line in fhand until
+    if line.startswith('Subject:') :--> if the line starts with subject make count
+        count = count + 1
+print('There were', count, 'subject lines in', fname) --> at the end print the count and the lines
+
+/////////////////////////////
+
+Enter the file name: There were 6 subject lines in mbox.txt
+
+-Bad-File-Names-
+
+fname = input('Enter the file name: ')
+try:
+    fhand = open(fname)--> its going to blown up  and qill run the except option
+except:
+    print('File cannot be opened:', fname) 
+    quit() --> comes in and never returns without tracebakcs 
+
+count = 0
+for line in fhand:
+    if line.startswith('Subject:') :
+        count = count + 1
+print('There were', count, 'subject lines in', fname)
+
+/////////////////////////////////////
+Enter the file name: mbox.txt
+
+There were 1797 subject lines in mbox.txt
+
+Enter the file name:na na boo boo
+File cannot be opened: na na boo boo
+
+-Summary-
+
+*Secondary storage
+
+
+*Opening a file - file handle
+
+
+*File structure - newline character
+
+*Reading a file line by line with a foor loop
+
+*Searching for lines
+
+*Reading file names
+
+*Dealing with bad files
+
+

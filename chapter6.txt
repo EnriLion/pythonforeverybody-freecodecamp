@@ -1,0 +1,451 @@
+--Strings--
+
+-String-Data-Type-
+
+*String is a sequence of chartacters
+
+*A string literal uses quotes "Hello" or 'Hello'
+
+*For strings, + means "concatenate"
+
+*When a string contains numbers, it is still a string
+
+*We can convert numbers in a string into a number using int()
+
+>>> str1 = "Hello"
+>>> str2 = "there"
+>>> bob = str1 + str2
+>>> print(bob)
+Hellothere
+>>> str3 = '123'
+>>> str3 = str3 + 1
+Traceback....
+
+>>> x = int(str3) + 1
+>>> prtin(x)
+124
+>>>
+
+--Reading-and-Converting-
+
+*We prefer to read data in using "strings" and then parse and convert the data as we need
+
+*This gives us more control over error situations and/or bad user input
+
+*Raw input numbers must be "converted" from strings
+/////////////////////////////
+
+
+name = input('Enter:')
+
+print(name)
+
+name = input('Enter: ')
+
+# x = apple - 10 -> You can't sum a string with an integer
+
+x = int(apple) =10
+
+print(x)
+
+-Loking-inside-Strings-
+
+* We can get at any single character ina  string using an index specified in "square brackets"
+
+*The index valye must be an integer and starts at zero
+
+*The index value can be an expression that is computed
+
+[b][a][n][a][n][a]
+0   1  2  3  4  5
+
+>>> fruit = 'banana'
+>>> letter = fruit[1]
+>>> print(letter)
+a
+>>> x= 3
+>>> w = fruit[x - 1]
+>>> print(w)
+n
+
+-A-Character-too-far-
+
+*You will get a "python error" if you attempt to index beyond the end of a string.
+
+*So be careful when constructing index values and slices
+
+>>> rot= 'abc'
+
+>>>print(zot[5])
+Traceback...
+>>>
+
+-Strings-have-length-
+
+*The builf in-function "len" gives us the length of a tring
+
+0----------------ln -1
+
+[b][a][n][a][n][a]
+0   1  2  3  4  5
+
+>>> fruit = 'banana'
+>>> print(len(fruit))
+6
+
+-Len-Function-
+
+>>> fruit = 'banana'
+>>> x = len(fruit) 
+>>> print(len(fruit))
+6
+
+'banana'(a string) -> len() function -> 6 (a number)
+
+-looping-through-strings-
+
+*Using a while statement and an iteration variable, and then "iteration variable" and then "len" function, we can construct a loop to look at each of the letters in a string individaully.
+
+fruit = 'banana'
+index = 0
+while index < len(fruit):
+    letter = fruit[index]
+    print(index, letter)
+    index = index + 1
+//////////////////////////
+
+0 b
+1 a
+2 n
+3 a
+4 n
+5 a
+
+-Using a for loop-
+
+*A definite loop using a "for" statement is much more elegant
+
+*The "iteration vairable" is completely taken care of by the "for" loop
+
+fruit = 'banana'
+for letter in fruit:
+     print(letter)
+///////////////////////
+
+b
+a
+n
+a
+n
+a
+
+"The less code you write the less chances you make a mistake"
+
+--Looping-and-Counting--
+
+*This is a simple loop that loops through each letter in a string and counts the number of times the loop encounters the 'a' character
+
+
+word = 'banana'
+count = 0
+for letter  in word :
+    if letter == 'a' :
+        count = count + 1
+print(count)
+
+-Looking deeper into "in"-
+
+*The "iteration variable" iterates through the "sequence" (ordered set)
+
+*The "block(body" of code is executed once for each value "in" the "sequence"
+
+*The "iteration variable" moves through all of the values "in" the sequence
+
+for letter in 'banana' :
+     print(letter)
+
+letter->Iteration variable
+
+'banana'->six-character string
+
+**for each caracter in this string banana print the string
+
+for letter in 'banana':
+    print(letter)
+
+*for "iteration variable" iterates throguh the string and the block (body) of vode is executed once for each value in the sequence
+
+--More String Operations--
+
+-Slicing Strings-
+
+*We can also look at any continous section of a string using "colon operator"
+
+*The second number is one beyond the end of the slice- "up to but not including"
+
+*If the second number is beyond the end of the string, it stops at the end
+
+[M][o][n][t][y][][P][y][t][h][o][n]
+ 0  1  2  3  4  5 6  7  8  9  10 11
+
+
+>>> s = 'Monty Python'
+>>> print(s[0:4])
+Mont
+>>> print(s[6:7])
+P
+>>> print(s[6:20])
+Python
+
+*If we leave off the first number or the last number of the slice, it is assumed to be the beginning or end of the string respectively
+
+>>>print(s[:2])
+Mo
+>>>print(s[8:])
+thon
+>>>print(s[:])
+Monty Ptyhon
+
+-String-Concatenation-
+
+*When the + operator is applied to strings, it means "concatenation"
+
+>>> a = "Hello"
+>>> b = a + 'There'
+>>> print(b)
+HelloThere
+>>> c = a + ' ' + 'There'
+>>> print(c)
+Hello There
+>>>
+
+-When we used a print built-in function there are a space between two variables that is not happening in the example above where the variable is concatenate.
+print(x,y)
+
+
+--Using in as a logicla Operator--
+
+*The 'in' keyword can also be used to check to see if one string is "in" another string
+
+*The 'in' expression is a logical expression that returns True or False and can be used in an if statement
+
+>>> fruit = 'banana'
+>>> 'n' in fruit
+True
+>>> 'm' in fruit
+False
+>>> 'nan; in fruit
+True
+>>> if 'a' in fruit :
+...    print('Found it!')
+...
+Found it!
+>>>
+
+*The 'in' is like '== ' ' != ' '<=' or something like that.
+
+--String comparisons--
+
+
+*the above example shows how an instring could be manipualted in python an compared as example :
+
+banana -compare-> a = a >(less than) b show is going to run the code
+as well as the after as c < (greater than) b show is going to run this output instead of the previous one.
+
+
+--String library--
+
+*Python has a number of string "functions" which are in the "string library"
+
+*These functions are already built into every string - we invoke them by appending the function to the string variable
+
+*These functions do not modify the original string, instead they return a new string that has been altered.
+
+*the function lower( are going to put everything in lower case) and also we can manage as print('Hi There'. lower())
+
+>>> greet = 'Hello Bob'
+>>>zap = greet.lower()
+>>>print(zap)
+hello bob
+>>>print(greet)
+Hello Bob
+>>>print('Hi There'. lower())
+hi there
+stuff= 'Hello Bob'
+type(stuff)
+Hell Bob
+dir(stuff)
+['capitalize',...] --> all the methods of strings we can use with strings.
+
+String Library
+
+str.capitalize()
+str.center(width[, fillchar])
+str.endswith(suffix[, start[, end]])
+str.find(sub[, start[, end]])
+str.lstrip([chars]])
+str.replace(old[, new[, count]])
+str.lower()
+str.rstrip([chars])
+str.strip([chars])
+
+
+-Searching a string-
+
+*We use the find() function to search for a substring within another string
+
+*find() finds the first occurence of the substring
+
+*If the substring is not found, find() returns -1
+
+*"Remember that string position starts at zero"
+
+[b][a][n][a][n][a]
+ 0  1  2  3  4  5
+
+>>> fruit = 'banana'
+>>> pos = fruit.find('na')
+>>> print(pos)
+2
+>>> aa = fruit.find('z') --  this position doesn't exist so is going to returns me -1
+>>> print(aa)
+-1
+
+-Making everything UPPER CASE-
+
+*You can make a copy of a string in "lower case" o "upper case"
+
+*Often when we are searching for a string using find() we first convert the string to lower case so we can search a string regardless of case
+
+
+greet = 'Hello Bob'
+nnn = greet.upper()
+print(nnn)
+www = greet.lower()
+/////////////////////////
+HELLO BOB
+hello bob
+
+-Search-and-Replace-
+
+*The replace() function is like a "search and replace" operation in a word processor
+
+*It replace "all ocurrences" of the "search string" with the "replacemente string"
+
+>>> greet = 'Hello Bob'
+>>> nstr = greet.replace('Bob', 'Jane')
+>>> print(nstr)
+>>> nstr = greet.replace('o', 'X')
+>>> print(nstr)
+
+///////////////
+Hello Jane
+HellX Bxb
+
+*The replace is super useful to change the strings replacing them or it.
+
+ 
+-Stripping-Whitespace-
+
+*Sometimes we want to take a string and remove whitespace at the beginning and/or end
+
+*lstrip() and rstrip() remove whitespace at the left or right
+
+*strip() removes both beginning and ending whitespace
+
+print('Search and Replace')
+
+greet = '  Hello Bob  '
+print (greet.lstrip(), 'space')
+print (greet.rstrip(), 'space')
+print (greet.strip(), 'space')
+
+////////////////////////
+
+'Hello Bob ' -> lstrip / lefth side
+
+' Hello Bob' -> rstrip / right side
+
+'Hello Bob' strip-> both sides
+
+-Prefixes-
+
+
+>>> print('Prefixes')
+>>> line = 'Please have a nice day'
+>>> line.startswith('Please')
+True
+>>> line.startswith('p')
+False
+
+-Parsing-and-Extracting-
+
+                     21    31
+                     |      | 
+From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
+                      ---------
+data = 'From stephe.marquard@uct.ac.za Sat Jan 5 9:14:16 2008'
+
+
+print('Parsing and Extracting')
+
+>>> data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+
+>>> atpos = data.find('@')--> shows the position
+>>> print(atpos)
+21
+>>> sppos = data.find(' ', atpos) => sppos -> data.find(give the position after the atpos)
+>>> print(sppos)
+31
+>>> host = data[atpos+1 : sppos] -> data [ sub atpos+1(postion add 1) and adding sppos] because is up to but not including the ".za"
+>>>print(host)
+uct.ac.za
+
+-Two-Kinds-of-Strings-
+
+Python 3.5.1
+
+>>> x = ' '
+>>> type(x) 
+<type 'str'>
+>>> x = u' '
+>> type(x)
+<type 'unicode'>
+
+Python 3.5.1
+
+>>> x = ' '
+>>> type(x) 
+<class 'str'>
+>>> x = u' '
+>> type(x)
+<class 'str'>
+
+In Python3, all strings are Unicode
+
+
+--Summary--
+
+*String type
+
+*Read/Convert
+
+*Indexing strings[]
+
+*Slicing strings[2:4]
+
+*Looping through stirngs with "for" and "while"
+
+*Concatening strings with + 
+
+*Strings operations
+
+*Strings library
+
+*Strings Comparisons
+
+*Searchin in strings
+
+*Replacing text
+
+*Stripping white space

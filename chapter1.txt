@@ -1,0 +1,96 @@
+--Reserved Words--
+
+False
+class
+return
+is 
+finally
+continue 
+nonlocal
+while 
+not 
+or 
+with 
+yield
+pass 
+raise
+import 
+try 
+global 
+from 
+for 
+in 
+raise
+elig
+else
+del
+def
+if 
+class
+except
+break
+as 
+and 
+True
+None
+False
+
+--Senteces or Lines--
+
+x = 2 <----- Assignment statement
+
+x = x + 2 < --- Assignment with expression
+
+print(x) < --- Print statement
+
+x -> variable
+
+= -> operator
+
+2 -> constant
+
+print -> reserved word
+
+
+--Python Scripts--
+
+Write scripts and run the scripts as bash (.py)
+
+
+--Program Steps or Program Flow--
+
+Is like a sequences of steps repeating in to be order to be done.
+
+
+--Sequential Steps--
+
+*Float Charts
+
+*Diagram Charts
+
+--Conditional Steps--
+
+Program:
+
+x= 5
+
+if x < 10:
+	print ('Smaller')
+if x > 20:
+	print ('Bigger')
+
+
+print ('Finis')
+
+--Repeated Steps--
+
+n=5
+while n > 0 :
+	print ('Finis')
+	n = n -1
+print ('Blastoff!')
+
+
+Chapter 2 - Variables, Expressions and Statements
+
+

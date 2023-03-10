@@ -1,0 +1,306 @@
+
+---VARIABLES--- 
+
+--Constants--
+
+*Fixed values such as numbers, letter, and strings, are called "constants" because their value does not change
+
+*Numeric constants are as you expect
+
+*String constants use single quote(')
+ or double quotes (') 
+
+>> print(123)
+123
+
+>> print(98.6)
+98.6
+
+
+
+>> print('Hello world')
+
+Hello world
+
+
+--Reserved Words--
+
+*Can't use as variables names/identifiers
+
+False  class return is finally
+
+None if for lambda continue
+
+True def from while nonlocal
+
+and del  global not with
+
+as elif try or  yield
+
+assert else import pass
+
+break excpet in raise
+
+--Variables--
+
+*A variable is a named place in the memory where a programmer can store data and later retieve the data using the variable name
+
+x = 12.2
+
+y = 14
+
+
+--Python Variable Name Rules--
+
+*Must start with a letter or underscore _
+
+*Must  consist of letters, numbers  and underscores
+
+*Case sensitive
+
+Good: spam eggs spam23 _speed
+
+Bad: 23spam #sign var.12
+
+Different: spam Spam SPAM
+
+
+--Mnemonic Variable Names--
+
+*Since we programmers are given  a choice in how we choose our variable names, there is a bit of "best practice"
+
+*We name variables to help us remember what we intend to store  in them ("mnemonic" = "memory aid")
+
+*This can confuse beginning students because well-named variables often "sound" so good  that they must be keywords
+
+
+--Assignment Statements--
+
+*We assign a value to a variable using assginment statement (=)
+
+*An assingment statement consists of an expression on the right-hand side and a variable to store thre result
+
+x = 0.6
+
+x = 3.9 * x * ( 1 - x )
+
+-> x = 0.93
+
+
+---EXPRESSIONS--- 
+
+Operator | Operation
+-------------------------
+   +     | Addition
+-------------------------
+   -     | Subtraction
+-------------------------
+   *     | Multiplication
+-------------------------
+   /     | Division
+-------------------------
+   **    | Power
+-------------------------
+   %     | Remainder
+-------------------------
+
+
+---Order of Evaluation--- 
+
+When we using operators together - Python  must kn ow whis to do first
+
+*Parentheses are always respected
+
+*Exponentiation(raise to a power)
+
+*Addition and Substrction
+
+*Left to right 
+----------------------
+
+Parenthesis
+
+Power
+
+Multiplication
+
+Addition 
+
+Left to Right
+
+-----------------------
+
+>>> x= 1 + 2 ** 3 / 4 *5
+
+>>> print(x)
+
+11.0
+
+>>>
+//////////////////////////
+
+1 + 2 ** 3 / 4 * 5
+
+1 + 8/4 * 5
+
+1 + 2 * 5
+
+1 + 10
+
+11
+
+/////////////////////////
+---------------------------
+
+--What does "Type" Mean?--
+
+
+*In Python variables, literas, and 
+constants have a "type"
+
+*Python knows the difference between
+an integer number and a string
+
+*For example "+" means "addition" if something 
+is a number and  "concatenate" if something is a string
+
+////////////////////////////////
+
+>>> ddd = 1 + 4
+>>> print (ddd)
+
+5
+
+>>> eee = 'hello' + 'there'
+
+>>> print(eee)
+
+hello there
+----------------------------------
+
+--What does "Type" Mean?--
+
+*Python knows what type everything is
+
+* Some operations are prohibited
+
+*We can ask Python what type something is by using the type() function
+
+>>> type(eee)
+<class 'str'>
+
+--Several Types of Numbers--
+
+*Number have two main types, Integers and floats but there are variations
+
+--Type Conversions--
+
+*The integer will be converted in a float(implicit in a operation)
+*You can control this with the built-in functions int() and float()
+
+>>> print(float(99) + 100)
+199.0
+
+>>> i = 42
+>>> type(i)
+<class 'int'>
+>>> f = float(i)
+>>> print(f)
+42.0
+>>> type(f)
+<class 'float'>
+>>>
+
+
+--integer division--
+
+*Integer division  produces a floating point result
+
+------------------->PYTHON2.X was different
+>>> print(10/2)
+5.0 
+>>> print(9/2)
+4.5 
+>>>print(99/100)
+0.99 
+------------------->PYTHON3.0
+
+>>> print(10.0/2.0)
+5.0
+>>>print(99.0/100.0)
+0.99
+
+
+--Integer division--
+
+*Integer division  produces a floating point result
+
+------------------->PYTHON2.X was different
+>>> print(10/2)
+5.0 
+>>> print(9/2)
+4.5 
+>>>print(99/100)
+0.99 
+------------------->PYTHON3.0
+
+>>> print(10.0/2.0)
+5.0
+>>>print(99.0/100.0)
+0.99
+
+
+
+--String conversions--
+
+*You can also use int() and float() to convert between  strings and integers
+
+* You will get an __error__ if the string does not contain numeric characters
+
+//////////////////////////////////////
+
+>>>sval = '123'
+>>> type(sval)
+<class 'str'>
+>>> print(sval + 1)
+Traceback (most recent call last):...
+
+>>>ival = int(sval)
+>>> type(ival)
+<class 'str'>
+>>> print(ival +1)
+124
+>>> nsv = 'hello hob'
+>>> niv = int(nsv)
+
+Traceback (most recent call last):...
+
+
+-- User Input--
+
+*We can instruct Python ton pause and read data from the user using the input() function
+
+*The input() function returns a string
+
+nam = input('Who are you? ')
+print('Welcome', nam)
+
+///////////////////
+
+Who are you? Enrique
+Welcome Enrique
+
+-- Converting User Input --
+
+*If we want to read a number from the user, we must convert it from a string to a number  using  a type  conversion function
+
+*Later we will deal with bad input dada
+
+inp = input('Europe Floor?)
+usf = int(inp) + 1
+print('US floor', nam)
+
+-- Comments in Python -- 
+
+Anything a  # is ignored by Python
+
