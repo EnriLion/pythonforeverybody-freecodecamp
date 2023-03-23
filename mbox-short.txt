@@ -6,9 +6,3 @@ From: stephen.marquard@uct.ac.za
 From: louis@media.bekeley.edu
 From: rjlowe@iupi.edu
 From: zqian@umich.edu
-Subject: [sakai] svn commit: r39772 - content/branches/
-Subject: [sakai] svn commit: r39772 - content/branches/
-Subject: [sakai] svn commit: r39772 - content/branches/
-Subject: [sakai] svn commit: r39772 - content/branches/
-Subject: [sakai] svn commit: r39772 - content/branches/
-Subject: [sakai] svn commit: r39772 - content/branches/

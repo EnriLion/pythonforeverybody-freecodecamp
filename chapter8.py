@@ -121,11 +121,100 @@ print("Using the range function")
 # print(20 not in some)
 
 
-print('Lists are in Order')
+# print('Lists are in Order')
 
-friends = ['Joseph', 'Glenn', 'Sally']
-friends.sort()
-print(friends)
-print(friends[1])
+# friends = ['Joseph', 'Glenn', 'Sally']
+# friends.sort()
+# print(friends)
+# print(friends[1])
 
+# print('Built-in Functions and Lists')
+# nums = [3, 41, 12, 9, 74, 15]
+
+
+# print(len(nums))
+
+# print(max(nums)) 
+
+# print(min(nums))
+
+# print(sum(nums))
+
+# print(sum(nums)/len(nums))
+
+
+# total = 0
+# count = 0
+# while True:
+#     inp = input('Enter a number: ')
+#     if inp == 'done' : break
+#     value = float(inp)
+#     total = total + value
+#     count = count + 1
+
+# average = total / count
+# print('Average:', average)
+
+
+#There is the other way to do it with list() functions
+
+# numlist = list()
+# while True :
+#     inp = input('Ente a numer: ')
+#     if inp == 'done' : break 
+#     value = float(inp)
+#     numlist.append(value)
+
+# average = sum(numlist) / len(numlist)
+# print('Average:', average)
+
+print('Best Friends: Strings and Lists')
+
+abc = 'With three words'
+stuff = abc.split()
+print(stuff)
+print(len(stuff))
+print(stuff[0])
+
+print("\n")
+for w in stuff:
+    print(w)
+
+print("\n Another example")
+
+line = 'A lot             of  spaces'
+etc = line.split()
+print(etc)
+
+line = 'first;second;third'
+
+thing = line.split()
+
+print(thing)
+
+print(len(thing))
+
+thing = line.split(';')
+
+print(thing)
+
+print(len(thing))
+
+
+print('\nAnother example using emails')
+
+fhand = open('mbox-short.txt')
+for line in fhand:
+    line = line.rstrip()
+    if not line.startswith('From ') : continue
+    words = line.split()
+    print(words[2])
+# ////////////////////
+
+
+print('\nAnother example spliting an email')
+
+line = 'From stephen.marquard@uxt.ac.za Sat Jan 5 09:14:16 2008'
+words = line.split()
+print(words)
 

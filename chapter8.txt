@@ -289,4 +289,140 @@ print(friends[1])
 
 -Built-in-Functions-and-Lists-
 
+*There are a number of "functions" built into "Python" that take "lists" as parameters
+
+*Remember the loops we built? These are much simpler
+
+
+nums = [3, 41, 12, 9, 74, 15]
+
+print(len(nums)) --> how many items they are.
+
+print(max(nums)) --> go and find the max in the list
+
+print(min(nums)) --> find the smallest
+
+print(sum(nums)) --> sum goes through and sum all up
+
+print(sum(nums)/len(nums)) --> we could make the average and sum all of them and dividing by the len
+
+///////////////////////////////////
+
+6
+74
+3
+154
+25.6666666668
+
+-Built-in-Functions-and-Lists-
+
+*Generate with while True the average 
+
+total = 0
+count = 0
+while True:
+    inp = input('Enter a number: ')
+    if inp == 'done' : break
+    value = float(inp)
+    total = total + value
+    count = count + 1
+
+average = total / count
+print('Average:', average)
+
+*Generate with while True the average with lists()
+
+numlist = list() -- make an empty list and assign the empty list
+while True : - while true
+    inp = input('Ente a numer: ') -- create the number
+    if inp == 'done' : break  -- if inp 'done' get out of the loop
+    value = float(inp) ==
+    numlist.append(value) -- each time will grew the list and will append it to the list
+
+average = sum(numlist) / len(numlist)
+print('Average:', average)
+
+
+**There is a problem with one million numbers and all are going to start in the memory simultaneously  where in the first example is doing the calculation( and are not going to use so much memory)
+
+///////////////////////////////
+
+
+Numer: 2
+Numer: 2
+Number: 2
+Numer:2
+Numer:2
+done
+average: 3.0
+
+
+-Strings vs Lists-
+
+-Best Friends: Strings and Lists-
+
+abc = 'With three words' - we have a string  but we have space and technically what string does is that is going to find every space and break the string in pieces and transforming the string in lists
+stuff = abc.split() -- now .split() method works!!!
+print(stuff) --give the list stuff
+print(len(stuff))
+print(stuff[0]) -- we could use find instead of using [0] the index braces
+
+/////////////////////////////
+
+['With', 'three', 'words']
+3
+With
+
+
+for w in stuff:
+    print(w)
+
+/////////////////////////////
+
+With
+Three
+words
+
+**Split breaks a string into parts and produce a list of strings. We think of these as words. We can access a particular word or loop through all the words.
+
+///////////////////////////
+
+print("\n Another example")
+
+line = 'A lot             of  spaces'
+etc = line.split()
+print(etc)
+
+line = 'first;second;third'
+
+thing = line.split()
+
+print(thing)
+
+print(len(thing))
+
+thing = line.split(';')
+
+print(thing)
+
+
+print(len(thing))
+
+//////////////////////////////////
+
+*When you do not specify a "delimiter", multiple spacesare treated like on delimiter
+
+*You can specify what "delimiter" character to use in the "splitting"
+
+*There are other characters as tabs, space , new lines (widespace) are also qualified in split
+
+print("\n Another example about the day of the week")
+
+fhand = open('mbox-short.txt')-- open a file
+for line in fhand: -- loop through the file
+    line = line.rstrip() --rstrip() take the newlines
+    if not line.startswith('From ') : continue -- if stat with 'From and space' will ignoring the others and..
+    words = line.split() -- will split it 
+    print(words[2]) -- will print the second word
+
 
