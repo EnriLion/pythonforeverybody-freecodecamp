@@ -425,4 +425,18 @@ for line in fhand: -- loop through the file
     words = line.split() -- will split it 
     print(words[2]) -- will print the second word
 
+--The-Double-Split-Pattern-
+
+*Sometims we split a line one way, and then grab one of the pieces of the line and split that piece again
+
+  0      1                         2    3   4   5         6 
+From | stephen.marquard@uxt.ac.za|Sat| Jan |5 |09:14:16| 2008
+
+words = line.split()
+email = words[1] -- we take the number (1)
+pieces = email.split('@') split with the '@' as ['stephen.marquard', 'uct.ac.za']
+#And if only want to know the direction of the email is easy because his index is 1
+print(pieces[1])
+
+##We could use also find() 
 
