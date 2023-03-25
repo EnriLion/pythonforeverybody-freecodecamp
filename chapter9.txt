@@ -1,0 +1,135 @@
+--Collection-
+
+-What is a collection?
+
+*A collection is nice because we can put more than one value in it and carry them all around in one convenient package
+
+*We have a bunch of values in a single "variable"
+
+*We do this by having more than one place "in" the variable
+
+*We have ways of finding the different places in the variable
+
+
+-What is not a "Collection"?
+
+*Most of our "variables" have one value in them - when we put a new value in the "variable" - the old values is overwritten
+
+$ python
+
+x = 2
+
+x = 4
+
+print(x)
+
+-A Story of Two Collections-
+
+*List
+   *A linear collection of values that say in order ( like pringles)
+*Dictionary
+   *A "bag" of values, each with its own label ( its messy like a wallet)
+
+-Dictionaries- http://en.wikipedia.org/wiki/Associative_array
+
+Dictionaries are like if we put in each thing stickers 
+
+*Is like a bagpack but you have label them
+
+-Dictionaries-
+
+*Dictionaries are Python's most powrful data collection
+
+*Dictionaries allow us to do fast database-like operations in Python
+
+*Dictionaries have different names in different languages
+
+	*Associate Arrays - Perl/PHP
+
+	*Properties or Map or HashMap - Java
+
+	*Property Bag - C#/.Net
+
+*Lists "index" their entries based on the position in the list
+
+*"Dictionaries" are like bags - no order
+
+*So we "index" the things we put in the "dictionary with a "lookup tag"
+
+ 
+purse = dict()
+purse['money'] = 12 ->money(12)
+purse['candy'] = 3->candy(3)
+purse['tissues'] = 75-> tissues(75)
+print(purse)
+print(purse['candy'])
+
+purse['candy'] = purse['candy'] + 2 -> make 3 to 5 in candy
+print(purse)
+
+/////////////////////////////////////
+ 
+{'tissues': 75, 'candy': 3, 'money': 12}
+3
+{'tissues': 75, 'candy': 5, 'money': 12}
+
+-Comparing Lists and Dictionaries-
+
+*"Dictionaries" are like "lists" except tha they use "keys" instead of numbers to look up "values"
+
+
+
+print('\n','Lists')
+lst = list()
+lst.append(21)
+lst.append(183)
+print(lst)
+lst[0] = 23
+print(lst)
+
+print('\n','Dictionaries')
+ddd = dict()
+ddd['age'] = 21
+ddd['course'] = 182
+print(ddd)
+ddd['age'] = 23
+print(ddd)
+
+//////////////////////////////////
+
+    List
+
+Key  Value
+
+[0]  21
+
+[1]  183
+
+    Dictionary
+
+Key        Value
+
+['course'] 182  
+                       ddd
+['age']    21
+
+
+-Dictionary Literas(Constants)-
+
+*Dictionary literals use curly braces and have a list of key: value pairs
+
+*You can make an "empty dictionary" using empty curly braces
+
+--Dictionary Literals (Constants)-
+
+*Dictionary literals use curly braces and have a lis tof key: value pairs
+
+*You can make an "empty dictionary" using empty curl braces
+
+jjj = {'chuck' : 1,  'fred' : 42, 'jan' : 100}
+print(jjj)
+
+ooo= { }
+print(ooo)
+
+

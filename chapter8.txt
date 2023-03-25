@@ -438,5 +438,90 @@ pieces = email.split('@') split with the '@' as ['stephen.marquard', 'uct.ac.za'
 #And if only want to know the direction of the email is easy because his index is 1
 print(pieces[1])
 
-##We could use also find() 
+/////////////////////////
+uxt.ac.za
+
+##We could use also find()  but the example above is more a tipical example of how to use it.
+
+-List-Summary-
+
+*Concept of collection
+
+*Lists and defninite loops
+
+*Indexing and lookup
+
+*List mutability
+
+*Functions:len, min, max, sum
+
+*Slicing lists
+
+*List methods: append, remove
+
+*Sorting lists
+
+*Splitting strings into lists of words
+
+*Usig split to parse strings
+
+-Strings, Files, Lists & the Guardian Pattern-
+
+han = open('mbox-short.txt')
+
+for line in han:
+    line = line.rstrip()
+    wds = line.split()
+    if wds[0] != 'from' :
+        continue
+    print(wds[2])
+
+*You need to be careful with the traceback and how to fix the code
+
+for line in han:
+    line = line.rstrip()
+    print('Line', line)
+    wds = line.split()
+    print('Words:',wds)
+
+    # Guardian pattern
+    if len(wds) < 1 : #this is a good way to debugging or printing the characteres
+        continue
+    if wds[0] != 'from' :
+        print('Ignore')
+        continue
+    print(wds[2])
+
+#Works clean
+
+
+for line in han:
+    line = line.rstrip()
+    # print('Line', line)
+    wds = line.split()
+    # print('Words:',wds)
+
+    # Guardian pattern
+    if len(wds) < 1 :
+        continue
+    if wds[0] != 'From' : #This is the word that gave us the traceback
+        # print('Ignore')
+        continue
+    print(wds[2])
+
+
+
+for line in han:
+    line = line.rstrip()
+    print('Line', line)
+    wds = line.split()
+    if line == '':
+        # print('Skip Blank')
+        continue
+    if wds[0] != 'from' :
+        # print('Ignore')
+        continue
+    print(wds[2])
+
+
 
