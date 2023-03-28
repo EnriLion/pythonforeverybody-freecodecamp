@@ -129,7 +129,87 @@ Key        Value
 jjj = {'chuck' : 1,  'fred' : 42, 'jan' : 100}
 print(jjj)
 
-ooo= { }
+ooo= { } #to put the curly braces is shortuc to call the variable dict()
 print(ooo)
 
+--Counting--
+
+--Most Common Name?-
+
+-Counting an histagram/ how many times happened.
+
+-one piece of data at the time and in each time in every content to starting in time.
+
+What is the common name?
+
+marquard cwen cwen
+ zhen  marquard zhen
+
+csev  zhen csev
+           marquard
+zhen csev  zhen
+
+*For humans is easy and you put in a pper and make takemarks and is have to be done
+
+*And that is how we are going to use dictionaries to do that
+
+-Many-Counters-with-a-Dictionary-
+
+One common use of dictionaries is "counting" how often we "see" something
+
+
+
+ccc = dict()
+ccc['csev'] = 1
+ccc['cwen'] = 1
+print(ccc)
+
+ccc['cwen'] = ccc['cwen'] + 1
+
+print(ccc)
+
+//////////////////////
+
+key    value
+
+csev  III
+cwen  II
+
+*We could extend the dictionary by adding more numbers
+
+-Dictionary-TRacebacks-
+
+* It is an "error" to reference a key which is not in the dictionary 
+
+*We can use the "in" operator to see if a key is in the dictionary
+
+ccc = dict() --> 
+
+print(ccc['csev']) --> blows operator
+
+'csev' in ccc --> if csev is in ccc as result is False and we could avoid the traceback
+
+-When we see a new name--
+
+*When we encounter a new name, we need to add a new entry in the "dictionary" and if this the second or later time we have seen the "name", we simply add one to the count in the "dictionary" under that "name"
+
+
+counts = dict() 
+names = ['csev', 'cwen', 'csev', 'zqian', 'cwen']
+for name in names: --> loop through all the list
+    if name not in counts: --> if the name is not in the dictionary already is going to set and be 1
+        counts[name] = 1
+    else: -> if not --> will got the old value and counts the name and will add 1 to it
+        counts[name] = counts[name] + 1
+print(counts) --> and the end of the loop we have the count dictionary or the histogram we are looking for.
+
+/////////////////////////////
+
+{'csev': 2, 'zqian': 1, 'cwen': 2}
+
+-The "get" method for dictionaries-
+
+The pattern of checking to see if a "key" is already in a dictionary and assuming a default value if the "key" is not there is so common that there is a "method" called "get()" that does this for us
+
+Default value if key does not exist (and no Traceback)
 
