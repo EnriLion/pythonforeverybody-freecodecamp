@@ -63,9 +63,24 @@ print(counts)
 
 print('\nThe get method for dictionaries')
 
+counts = dict()
+
+names = ['csev', 'cwen', 'csev', 'zqian', 'cwen']
 if name in counts:
     x = counts[name]
 else:
     x = 0
 
 x = counts.get(name, 0)
+print(counts)
+
+print('\nSimplified counting with get()')
+
+counts = dict()
+names = ['csev', 'cwen', 'csev', 'zqian', 'cwen']
+for name in names : 
+    counts[name] = counts.get(name, 0) + 1
+print(counts)
+
+
+print('\n()')

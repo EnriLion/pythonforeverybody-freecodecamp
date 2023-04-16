@@ -213,3 +213,106 @@ The pattern of checking to see if a "key" is already in a dictionary and assumin
 
 Default value if key does not exist (and no Traceback)
 
+
+if name in counts: -< 
+    x = counts[name] -> retrive the value
+else:
+    x = 0 --> the default that is not right there
+
+x = counts.get(name, 0) -->counts(dictionary).gets(method) of the default value(name) [ without not traceback)
+
+#Collapsing will become an idiom 
+
+
+--Simplified counting with get()--
+
+We can use get() and provide a default value of zero when the key is not yet in the dictionary - and then just add one
+
+*Its thanks to the idiom that we could get through the dictionaries and adding one to them
+
+
+counts = dict()
+names = ['csev', 'cwen', 'csev', 'zqian', 'cwen']
+for name in names : --> name will be through the 5 values
+    counts[name] = counts.get(name, 0) + 1 --> if name will be 1 and 1 + 1 = 2 and if is not will be 0 + 1 = 1; so the first time that an elemnt appear the count will be 1 not 0 so what that makes the "0" default; and "0" is a common default like an histagram
+print(counts)
+
+//////////////////////////////
+
+Simplified counting with get()
+{'zqian': 1, 'cwen': 2, 'csev': 2}
+
+*This pattern is a really good pattern to know
+
+--Counting words in text--
+
+Writing programs (programming) is a very creative skill that requires a combination of logical thinking and problem-solving abilities. It involves crafting elegant solutions to complex problems, and requires a deep understanding of various programming languages, frameworks, and tools. The process of programming often involves iterating, testing, and refining code until it works as intended, and the end result can be a beautifully designed application or tool that solves real-world problems. Ultimately, programming is a highly rewarding and fulfilling skill that allows individuals to bring their ideas to life and make a positive impact on the world. So, mastering programming skills can lead to great career opportunities and personal growth.
+
+
+We are surrounded by a vast and complex world that is full of wonder, diversity, and opportunity. From the natural beauty of our planet to the technological advancements that shape our daily lives, there is no shortage of things to explore and discover. Whether it's the cultures, languages, and traditions of different people, or the scientific and technological breakthroughs that are constantly transforming our world, there is always something new to learn and experience. So, it's up to us to embrace the endless possibilities that surround us and make the most of our time on this earth.
+
+
+Our computers can be incredibly powerful tools for increasing productivity and enhancing creativity, but they can also be a source of mind-numbing distraction and overstimulation. With the endless stream of notifications, emails, and social media updates vying for our attention, it's easy to get caught up in the endless cycle of digital noise and lose sight of our priorities. However, with a little discipline and focus, we can harness the power of our computers to achieve our goals and make a positive impact on the world. By prioritizing deep work, limiting distractions, and using technology intentionally, we can cultivate a more productive and fulfilling relationship with our digital devices.
+
+--Couting pattern--
+
+counts = dict() #We create the variable dictionary
+
+print('Enter a line of text:') #Printing the  input
+line = input('') get the input 
+
+words = line.split() #split the chain of the input
+
+print('Words:', words) #print the words in each string
+
+print('Counting...')
+for words in words:
+    counts[word] = counts.get(word,0) + 1# will count[words] = will go through the idiom adding 1 to an existing entry
+print('Counts', counts) #And printing that out
+
+*The general pattern to count the words in a line of text is to split the line into words, then loop through the words and use a dictionary to track the count of each word independently.
+
+---Enhacement of the file ----
+
+counts = dict() --> we create the dictionary
+
+line = input('Enter a line of text:') --> we enter the text
+words = line.split() ---> we split each word of the variable 
+
+print("Words:", words) --> we print each word 
+print('\nCounting...')
+
+for word in words: --> loop through all the worlds given for the user
+    counts[word] = counts.get(word,0) + 1 --> enter the variable dictionary inside the word and will be use the method get like a dictionary counting each word 
+print('Counts', counts) --> will print the dictionary counting in each variable (word,0..1...so on)
+
+/////////////////
+
+Enter a line of text:
+
+the clown ran after the car and the car ran
+
+Counting....
+
+Counts{and:3...}
+
+--Define Loops and Dictionaries--
+
+Even thorugh dictionaries are not stored in order, we can write a for loop that goes through all the entries in a dictionary - actually it goes through all the entries in a dictionary - actually it goes through all of the keys in the dictionary and looks up the values.
+
+counts = { 'chuck': 1, 'fred': 42, 'jan': 100}
+
+for key in counts:
+    print(key, counts[key])
+
+...
+...
+jan 100
+chuck 1
+fred 42
+
+ 
+
+
+
+
