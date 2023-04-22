@@ -83,4 +83,18 @@ for name in names :
 print(counts)
 
 
-print('\n()')
+print('\n')
+print('Retrieving lists of Keys and Values')
+
+jjj = { 'chuck' :1, 'fred': 42, 'jan':100 }
+print(list(jjj))
+print(jjj.keys())
+print(jjj.values())
+print(jjj.items())
+
+print('\n')
+print('Bonus:Two Iteration Variables!')
+jjj = { 'chuck' :1, 'fred': 42, 'jan':100 }
+for aaa, bbb in jjj.items():
+    print(aaa, bbb)
+

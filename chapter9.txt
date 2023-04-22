@@ -311,8 +311,83 @@ jan 100
 chuck 1
 fred 42
 
- 
+--Retrieving lists of keys and values --
+
+You can get a list of keys, values, or items(both) from a dictionary
 
 
+jjj = { 'chuck' :1, 'fred': 42, 'jan':100 }
+print(list(jjj)) #turning this in a list
+print(jjj.keys()) #getting the keys like a list
+print(jjj.values()) # getting the values as list
+print(jjj.items()) #print item and is like a tuple
+
+///////////////////////
+['jan', 'chuck', 'fred']
+(['jan', 'chuck', 'fred'])
+([100, 1, 42])
+([('jan', 100), ('chuck', 1), ('fred', 42)])
+      0  1          1     1      1   2
+
+--Bonus: Two Iteration Variables--
+
+*We loop through the key-value pairs in a dictionary using *two* iteration varaibles
+
+*Each iteration, the first variable is the key and the second variable is the corresponding value for the key
+
+jjj = { 'chuck' :1, 'fred': 42, 'jan':100 }
+
+for aaa, bbb in jjj.items(): # to understand this is easy like for items, keys in dictionary.items() like a syntax.
+    print(aaa, bbb)
+
+////////// words ///////////
+
+name = input('Enter file:') # to use the name of the file
+handle = open(name) # we open the name of the file
+
+counts = dict() # we make an empty dictionary
+for line in handle: # line is going to be line by line by line
+    words = line.split() #we split each line into words
+    for word in words: #we are going to word into wordsto iterate each word of the line
+        counts[words] = counts.get(word,0) + 1 #we are going to do this histogram using get 
+
+#technically we have a nested loop to split each line of the file and the iter loop will count of each list
+////////////////////////////////
+#not we want to find the largest one and to find the  greatest value of the dictionary
+bigcount = None #we don't know what is the big count is
+bigword = None #we don't know what is the bigword
+for word, count in counts.items(): #we are going to the dictionary keys and values of the counts
+    if bigcount is None or count > bigcount: # if bigcount is none or less than bigcount
+        bigword = word  
+        bigcount = count
+# the max loop what is inside recording them
+
+print(bigword, bigcount)
+
+/////////////////////////
+$python words.py
+Enter file: words.txt the 7
+
+-- Summary --
+
+*What is a collection?
+
+*Lists versus Dictionaries
+
+*Dictionary constants
 
 
+*The most common word
+
+
+*Using the get() method
+
+
+*Hashing, and lack of order
+
+*Writing dicitionary loops
+
+*Sneak peek:tuples
+
+
+*Sorting dictionaries
