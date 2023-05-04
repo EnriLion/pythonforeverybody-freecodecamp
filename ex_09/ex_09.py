@@ -10,10 +10,40 @@ for lin in hand:
     wds = lin.split()
     #print(wds)
     for w in wds:
-        if w in di:
-            di[w] = di[w] + 1
-            print('**EXISTING***') 
-        else:
-            di[w] = 1
-            print('**NEW**') 
-        print(w,di[w])
+        # print('**',w,di.get(w,-99))# di.get(w,-99) the -99 explains if is in there count if not not count(ex. the word 'the' is not in the dictionary and that is why will be -99) and we are going to see the same before will be 1 and allows us to get
+
+        # oldcount = di.get(w,0) #look up if the oldcount in the dictionary we will count as 0
+        # print('**',w,di.get(w,-99))#the first time we see the word will count -99
+        # oldcount = di.get(w,0) #look up in this dictionary and get is the function of the dictionary look up the w(word) and if i don't get it give me back 0/ using the get an if we don't find it we assing the 0
+        # print(w,'old',oldcount)# print the old count
+        # newcount = oldcount + 1 # the newcount exist and we count the old(0) with 1 
+        # di[w] = newcount #we add the new count to the dictionary 
+
+        #idiom: retrieve/create/update counter  
+        di[w] = di.get(w,0) + 1 ## this convines all the previous lines in one 
+        # print(w,'new',di[w])
+
+        # print(w,'old',oldcount) #we are going to print it as old  
+        # newcount = oldcount + 1 # the new count we count the same only we count the 0 + 1 = 1
+        # di[w] = newcount
+        # print(w,'new',oldcount) #we are going to print it as old  
+
+        # if w in di:
+        #     di[w] = di[w] + 1 #the string is adding the w to count +1
+        #     # print('**EXISTING***')
+        # else:
+        #     di[w] = 1 #Adding only one
+            # print('**NEW**')
+        # print(w,di[w])
+# print(di)
+
+#now we want to find the most common word
+largest = -1
+theword = None
+for k,v  in di.items():
+    # print(k,v)
+    if v > largest:
+        largest = v
+        theword = k #capture/remember the key that was largest
+
+print(theword,largest)
