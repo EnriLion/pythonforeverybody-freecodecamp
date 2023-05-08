@@ -2,4 +2,100 @@
 -Tuples are like listss-
 Tuples are another kind of sequence that fucntions much like al ist
 -they have elements which are indexed starting at 0-
+-------------------------------
+x = ('Gleen', 'Sally', 'Joseph')
+print(x[2])
+y = ( 1, 9, 2)
+print(y)
+print(max(y))
+for iter in y:
+    print(iter)
+------------------------------
+
+Joseph
+(1, 9, 2)
+9
+1
+9
+2
+
+##Could be identical as a list
+
+--but... Tuples are "immutable"--
+
+Unlike a list, once you create a tuple, you cannot alter its contents - similar to string
+
+------------------------------
+
+x = [9, 8, 7]
+x[2] = 6
+print(x)
+
+------------------------------
+but... Tuples are "immutable"
+[9, 8, 6]
+
+------------------------------
+
+y = 'ABC' --> with a string is not posible
+y[2] =  'D'
+print(x)
+
+------------------------------
+
+
+# y = 'ABC'
+# # y[2] ='D'
+----------------------> Will give us a traceback about 'str'
+# z =(5, 4, 3) --> As well as tupple is not going to work because is not modifible
+# z[2] = 0
+----------------------> Will give us a traceback about 'tuple'
+
+--Things not to do with tuples--
+x = (3, 2, 1)
+x.sort() --> you can't sort
+x.append(5) --> you can't append as a list
+x.reverse() --> you can't sort in reverse order
+
+--Tuples are more efficient--
+
+*Since Python does not have to build tuple strucctures to be modifiable, they are simplier and more efficient in therms of memory use and performance than lists
+
+*So in our program when we are making "temporary variables" we prefer tuples over lists
+
+--Tuples and assignment--
+
+*We can also put a tuple in the left-hand side of an assigment statement 
+
+*We can even omit the parentheses
+
+------------------------------
+
+(x, y) = (4, 'fred')#we can print the tupple
+print(y)
+--------------------
+fred
+--------------------
+(a, b) = (99, 98)# we can put tupples of the left side
+print(a)
+--------------------
+99
+
+--Tuples and Dictionaries--
+*The items() method in dictionaries returns a list of (key, value) tuples
+d = dict() #we make a variable a dictionary
+d['csev'] = 2 ## this will be (k) --> inside the tuple
+d['cwen'] = 4 ## this will be (v) --> inside the tuple
+for (k,v) in d.items():
+    print(k, v)
+
+--------------------
+csev 2
+cwen 4
+--------------------
+tups = d.items() # hey give me back the dictionary the items of the dictionary
+print(tups) 
+-----------------
+dict_items([('csev', 2), ('cwen', 4)]) #a list of tuples 
+
 
