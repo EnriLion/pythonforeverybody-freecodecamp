@@ -46,3 +46,13 @@ for (k,v) in d.items():
     print(k, v)
 tups = d.items()
 print(tups)
+print('Tuples are Comparable')
+print((0, 1, 2) < (5, 1, 2))
+print((0, 1, 2000000) < (0, 3, 4))
+print(('Jones', 'Sally') < ('Jones', 'Sam'))
+print(('Jones', 'Sally') > ('Adams', 'Sam'))
+print('Sorting Lists of tuples')
+d = {'a':10, 'b':1, 'c':22}
+print(d.items())
+print(sorted(d.items()))
+
