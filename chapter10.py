@@ -1,5 +1,4 @@
 print('Tuples')
-
 x = ('Gleen', 'Sally', 'Joseph')
 print(x[2])
 y = ( 1, 9, 2)
@@ -55,4 +54,18 @@ print('Sorting Lists of tuples')
 d = {'a':10, 'b':1, 'c':22}
 print(d.items())
 print(sorted(d.items()))
+print('Using sorted()')
+t = sorted(d.items())
+print(t)
+for k, v in sorted(d.items()):
+    print(k, v)
+print('Using sorted()')
+c = {'a':10, 'b':1, 'c':22}
+tmp = list()
+for k, v in sorted(d.items()):
+    tmp.append( (v, k) )
+
+print(tmp)
+tmp = sorted(tmp, reverse=True)
+print(tmp)
 
