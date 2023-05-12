@@ -152,3 +152,44 @@ print(tmp)
 [(10, 'a'), (1, 'b'), (22, 'c')]
 [(22, 'c'), (10, 'a'), (1, 'b')] #is sorted in decendent order
 
+-----------------------File-----------
+
+fhand = open('README.md')#Read the file
+counts = dict() # create a dictionary
+for line in fhand: #creating a for loop in line through fhand variable
+    words =  line.split() #creating the word separing each string on the file
+    for word in words: # creating another loop to loop through the words
+        counts[word] = counts.get(word, 0) + 1 # adding through the dictionary word and getting + 1(making an histagram)
+-----------------------------------------------(Counts is the histagram)
+
+lst = list() # 
+for key, val in counts.items(): --> looping the keys and values for our list
+    newtup = (val, key) --> the newtup variable we make a list of tupples
+    lst.append(newtup) and we append the tupples through the list
+
+lst = sorted(lst, reverse=True) --> we transform the lst to sort the data
+----------------------------------------------(is sorted)--(almost do everything in one line)
+
+for val, key in lst[:10]: --> We are going through the lst and not including the :10(number 10)
+    print(key, val) --> we print the value
+
+--------------------------------------------
+
+--Even Shorter Version --
+
+ c = {'a':10, 'b':1, 'c':22}
+
+print( sorted( [ (v,k) for k,v in c.items() ] ) ) # this is called list comprehension 
+
+([ (v,k) ] ) == list of two tupples and will imply:
+
+([ (v,k) for k,v  in c.items() ]) == for k,v like a for loop (like a stamp)
+
+#List comprehension creates a dynamic list. In this case, we make a list of reserved tuples and then sort it.
+
+#You need to master the list comprehension
+
+https://docs.python.org/3/howto/sorting.html
+
+--Sorting a dictionary using tuples--
+

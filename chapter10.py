@@ -68,4 +68,5 @@ for k, v in sorted(d.items()):
 print(tmp)
 tmp = sorted(tmp, reverse=True)
 print(tmp)
-
+print('Even Shorter')
+print( sorted( [ (v,k) for k,v in c.items() ] ) )
