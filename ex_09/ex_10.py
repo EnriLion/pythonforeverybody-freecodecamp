@@ -37,13 +37,20 @@ for lin in hand:
         # print(w,di[w])
 # print(di)
 
-#now we want to find the most common word
-largest = -1
-theword = None
-for k,v  in di.items():
-    # print(k,v)
-    if v > largest:
-        largest = v
-        theword = k #capture/remember the key that was largest
+# x = sorted(di.items()) # give us a key value pairs using sorted to sort the key value pairs of the dictionary
+# print(x[:5]) # showing only the first 5
 
-print(theword,largest)
+tmp = list()
+for k,v in di.items() :
+    # print(k,v)
+    newt = (v,k)
+    tmp.append(newt)
+
+# print('Flipped',tmp)
+
+tmp = sorted(tmp, reverse=True)#is sorted by tuple
+# print('Sorted',tmp[:5])#not including the 5 
+
+for v,k in tmp[:5] :
+    print(k,v)
+
