@@ -3,3 +3,18 @@
 In computing, a regular expression, also referred to as "regex" or "regexp", provides a concise and flexible means for matching strings of text, such as particular characters, words, or patterns of charactes. A regular epxression is written in a formal language that can be interpreted by a regular expression processor.
 
 https://en.wikipedia.org/wiki/Regular_expression
+
+#Really clever "wild card" expressions for matching and parsin strings
+
+--Understanding Regular Expressions--
+
+*Very powerful and quite cryptic
+*Fun once you understand them
+*Regular expressions are a language unto themselves
+*A language of "marker characters" - programming with characters
+*It is kind of an "old school" langauge - compact
+
+http://xkcd.com/208/
+
+--Regular Expression Quick Guide--
+
