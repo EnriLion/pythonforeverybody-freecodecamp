@@ -127,7 +127,7 @@ print(pos)
 aa = fruit.find('z')
 print(aa)
 
-print('Making everything UPPER CASE') 
+print('Making everything UPPER CASE')
 
 greet = 'Hello Bob'
 nnn = greet.upper()
@@ -135,7 +135,7 @@ print(nnn)
 www = greet.lower()
 print(www)
 
-print('Search and Replace') 
+print('Search and Replace')
 
 
 
