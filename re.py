@@ -1,10 +1,10 @@
-# -Using re.search() like find()-
-# import re
+from re import search
 
-hand = open('mbox-short.txt')
-for line in hand:
-    line = line.rstrip()
-    # if re.search('From:', line) :
-    if re.search('^From:', line):
-        print(line)
-#We fine-tune what is matched by adding special characters to the string
+with open('mbox-short.txt', 'r') as hand:
+    for line in hand:
+        line = line.rstrip()
+        if search('^From:.*', line):
+            print(line)
+
+hand.close()
+

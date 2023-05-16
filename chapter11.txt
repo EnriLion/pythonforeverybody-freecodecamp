@@ -44,3 +44,37 @@ https://www.py4e.com/lectures3/Pythonlearn-11-Regex-Handout.txt
 *You can use re.findall() to extract portions of a string that match your regular expression, similar to a combination of find() and slicing: var[5:10]
 
 --Using re.search() like find()--
+
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if line find('From:') >= 0:
+       print(line)
+
+import re
+hand = open('mbox.short.txt')
+for line in hand:
+    line = line.rstrip()
+    if line find('From:') >= 0:
+       print(line)
+
+
+--Using re.search() like startswith()--
+
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if line.startswith('From:') :#We done printing the lins finding the lines from 
+       print(line) 
+
+.................................
+
+import re
+
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('^From:', line) :#start from the beginning of the line (^) and from at the begining(^) the difference betwen the first example is that we use a method in the string
+       print(line)
+
+#We fine-tine what is matched by adding special characters to the string
