@@ -78,3 +78,34 @@ for line in hand:
        print(line)
 
 #We fine-tine what is matched by adding special characters to the string
+
+-Wild-Card characters -
+
+*The dot character matches any character
+
+*If you add teh asterisk character, the character is "any number of times"
+
+X-Sieve : CMU Sieve 2.3(check)...
+X-DSPAM-Result: Innocent ...
+X-DSPAM-Confidence: 0.8475
+X-Content-Type-Message-Body: text/plain
+
+
+(Match the start of the line) ^X.(match any character) *(many times):  
+
+--Fine-Tuning Your Match--
+Depending on how "clean" your data is and the purpose of your application, you may want to narrow your match down a bit
+
+X-Sieve : CMU Sieve 2.3 (match)
+X-DSPAM-Result: Innocent(not-match becuase the followed colon and whitespace character)
+X-Plane is behind schedule: two weeks(this is the match that really want) and the previous could work but if we add:)(doesn't match because the space)
+
+(Match the start of the line) ^X-\S(Match any non-withespace character)+(one or more times) 
+
+--From Matching to Extracting--
+
+*re.serach() returns a True/False depending on whether the string matches the regular epxression
+
+*If we actually want the matching strings to be extracted, we use re.findall()
+
+
