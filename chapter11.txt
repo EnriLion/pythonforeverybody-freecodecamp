@@ -109,3 +109,29 @@ X-Plane is behind schedule: two weeks(this is the match that really want) and th
 *If we actually want the matching strings to be extracted, we use re.findall()
 
 
+import re
+x = 'My 2 favorite numbers are 19 and 42' # stamp...(2) got it .... stamp(19) got it ... stamp(42) got it.
+y = re.findall('[0-9]+',x)#there is one character that adds more ore one digits by thereself)
+print(y)
+
+........................
+
+['2', '19', '42']#A list of three strings
+
+[0-9]+ = a single digit(one or more digits)
+
+--Matching and Extracting Data--
+
+When we use re.findall(), it returns a list of zero or more sub-string that match the regular expressions.
+
+import re
+x = 'My 2 favorite numbers are 19 and 42' ..(no uppercase returns a string list)
+y = re.findall('[0-9]+',x)
+print(y)
+
+y = re.findall('[AEIOU]+',x) -- one or more (AA, will match , EEE ,etc)
+print(y)
+.................................
+
+['2', '19', '42']
+[] # and give us a string of list
