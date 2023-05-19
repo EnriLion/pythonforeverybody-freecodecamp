@@ -5,3 +5,8 @@ print(y)
 
 y = re.findall('[AEIOU]+',x)
 print(y)
+
+# ...............
+#import re
+x = 'From: Using the: character'
+y = re.findall('^F.+:',x)
