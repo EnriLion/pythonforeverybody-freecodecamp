@@ -138,4 +138,24 @@ print(y)
 
 --Warning: Greedy Matching --
 The repeat characters (* and +) push outward in both directions(greedy) to match the largets possible string
+---------------------------------------
+import re
+x = 'From: Using the: character'
+y = re.findall('^F.+:',x)
+print(y)
+
+"^F(first character in the match is an F).+(one or more characters):(last character in the match is a:)
+
+---------------------------------------
+['From: Using the:']
+
+--Non-Greedy Matching--
+
+Not all regular expression repeat codes are greedy!
+If you add a ? character, the + and * chill out a bit...
+
+import re
+x = 'From: Using the: character'
+y = re.findall('^F.+:',x)
+print(y)
 
