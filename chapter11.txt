@@ -159,3 +159,48 @@ x = 'From: Using the: character'
 y = re.findall('^F.+:',x)
 print(y)
 
+^F(first character in the match is an F).+?(one or more characters but not greedy):(last character in the match is a:)
+
+--Fine-Tuning String Extraction--
+
+You can refine the match for re.findall() and separately determine which portion of the match is to be extracted by using parentheses
+
+From stephen.marquez@uct.ac.za Sat Jan 5 09:14:16 2008
+
+print("\nFine-Tuning String Extraction\n")
+x = 'From stephen.marquez@uct.ac.za Sat Jan 5 09:14:16 2008' #python make the separation with the '@' and tehcnically stops in the blank(_) and in the other side as well.
+y = re.findall('\S+@\S+',x)
+
+\S+(at least one non-whitespace character)@\S+(at least one non-whitespace character)
+...............................................
+
+['stephen.marquez@uct.ac.za']
+
+Parentheses are not part of the match - but they  tell where to start and stop what string to extract.
+
+x = 'From stephen.marquez@uct.ac.za Sat Jan 5 09:14:16 2008' #python tells that starts from ^From and thankfully for the parenthesis
+y = re.findall('^From (\S+@\S+)',x)
+print(y)
+
+...............................................
+
+['stephen.marquez@uct.ac.za']
+
+--String Parsing --
+
+From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
+
+data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+atpos = data.find('@')#count the words until the '@'
+print(atpos)
+sppos = data.find(' ',atpos)
+print(sppos)
+host = data[atpos+1 : sppos]
+print(host)
+
+*Extracting a host name -using find and string slicing
+...............................................
+
+21
+31
+uct.ac.za
