@@ -192,10 +192,10 @@ From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008
 
 data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
 atpos = data.find('@')#count the words until the '@'
-print(atpos)
-sppos = data.find(' ',atpos)
+print(atpos) #print it the until the letter '@' each string
+sppos = data.find(' ',atpos)# and after until one space
 print(sppos)
-host = data[atpos+1 : sppos]
+host = data[atpos+1 : sppos]# we stract beyond the atpos +1 so is not going to add '@'(21) only 22 until the sppos
 print(host)
 
 *Extracting a host name -using find and string slicing
@@ -204,3 +204,28 @@ print(host)
 21
 31
 uct.ac.za
+
+--The-Double Split Pattern--
+
+Sometimes we split a line one way, and then grab one of the pieces of the line and split that piece again
+
+line = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+       [0]  |     [1]                |[2]|[3]|[4]|[5]|     [6]
+            | [0] | [1]              |
+words = line.split() # we split the lines with split of each space
+email = words[1]# we add the string 1
+pieces = email.split('@') and we split instead with withespace with the 
+'@'
+print(pieces[1])
+
+
+--The-Regex Version--
+
+print("\nThe Regex Version\n")
+lin = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+y = re.findall('@([^ ]*)',lin)
+print(y)
+
+'@(look through the string until you find an at sign)([^ ]*)'
+----------------------
+['uct.ac.za']
