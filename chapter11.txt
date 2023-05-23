@@ -222,10 +222,24 @@ print(pieces[1])
 --The-Regex Version--
 
 print("\nThe Regex Version\n")
-lin = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+lin = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'#look at the '@' and match no-black character not a blank and match any of them and will be one list that we looking for
 y = re.findall('@([^ ]*)',lin)
 print(y)
 
-'@(look through the string until you find an at sign)([^ ]*)'
+'@(look through the string until you find an at sign)([^ ](Match non-blank character)*(Match many of them))'
 ----------------------
 ['uct.ac.za']
+
+--Even Cooler Regex Version--
+
+lin = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+y = re.findall('^From.*@([^ ]*)',lin)#this is better becuae we could match any string easy
+print(y)
+
+^(Starting at the beginning of hte line)From(look for the string 'From').*@([^ ]*)
+----------------------------
+['uct.ac.za']
+['uct.ac.za']
+
+--Escape Character--
+If you want a special regular expression to just

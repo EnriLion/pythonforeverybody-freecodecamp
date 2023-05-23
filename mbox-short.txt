@@ -2,3 +2,10 @@ From: user@example.com
 To: recipient@example.com
 Subject: Test message
 This is a test message.
+X-DSPAM-Confidence: 0.8475
+X-DSPAM-Confidence: 0.8474
+X-DSPAM-Confidence: 0.7545
+X-DSPAM-Confidence: 0.9907
+X-DSPAM-Confidence: 0.1000
+X-DSPAM-Confidence: 0.4325
+X-DSPAM-Confidence: 0.2234
