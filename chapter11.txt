@@ -242,4 +242,20 @@ print(y)
 ['uct.ac.za']
 
 --Escape Character--
-If you want a special regular expression to just
+
+If you want a special regular expression to just behave normally(most of the time) you prefix it with '\'
+
+import re
+x = 'We just received $10.00 for cookies.'
+y = re.findall('\$[0-9.]+',x)
+print(y)
+
+\$(A real dollar sign)[0-9.](A digit or period)+(At least one or more)
+...................................
+['$10.00']
+
+--Summary--
+
+*Regular expressions are a cryptic but powerful language for matching strings and extracting elements from those strings.
+
+*Regular expressions have special characters that indicate intent

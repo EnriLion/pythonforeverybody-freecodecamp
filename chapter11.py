@@ -42,3 +42,7 @@ y = re.findall('@([^ ]*)',lin)
 print(y)
 y = re.findall('^From.*@([^ ]*)',lin)
 print(y)
+print("\nEscape Character\n")
+x = 'We just received $10.00 for cookies'
+y = re.findall('\$[0-9.]+',x)
+print(y)
