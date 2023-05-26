@@ -259,3 +259,12 @@ print(y)
 *Regular expressions are a cryptic but powerful language for matching strings and extracting elements from those strings.
 
 *Regular expressions have special characters that indicate intent
+
+--Sockets in Python--
+
+* Python has built-in support for TCP Sockets
+
+import socket #we import the library socket
+mysock  = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #we make our variable a socket function, socket..A..(we are going to make a socket across the internet, adn a stream socket(a series of blocks comes an another and theres another kind to deal with)
+mysock.connect( ('data.pr4e.org(host)', 80(port)) ) # A socket object that we are going to make a connection across the internet and make the phone call(80)
+

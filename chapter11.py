@@ -1,4 +1,5 @@
 import re
+import socket
 x = 'My 2 favorite numbers are 19 and 42'
 y = re.findall('[0-9]+',x)
 print(y)
@@ -46,3 +47,8 @@ print("\nEscape Character\n")
 x = 'We just received $10.00 for cookies'
 y = re.findall('\$[0-9.]+',x)
 print(y)
+print("\nSockets in Python\n")
+# import socket
+mysock  = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect( ('data.pr4e.org', 80) )
+print("\nApplication Protocols\n")
