@@ -298,3 +298,24 @@ http://www.dr-chuck.com/page1.htm
 * Each the user clicks on an anchor tag with an href= value to switch to a new page, the browser makes a connection to the web server and issues a "GET" request -to GET the content of the page at the specified URL
 
 * The server returns the HTML document to the Browser which formats and displays the document to the user
+
+
+--Internet Standards--
+
+* The Standards for all of the Internet Protocols(Inner Workings) are developed by an organization
+
+* Internet Engineering Task Force(IETF)
+
+* www.ietf.org
+
+* Standars are called "RFCs" - "Request for Comments"
+
+https://www.ietf.org/rfc/rfc791.txt
+
+
+
+* Each the user clicks on an anchor tag with an href= value to switch to a new page, the browser makes a connection to the web server and issues a "GET" request -to GET the content of the page at the specified URL
+
+* The server returns the HTML document to the Browser which formats and displays the document to the user
+
+
