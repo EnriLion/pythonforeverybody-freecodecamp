@@ -4,7 +4,8 @@ import socket #the socket import the conection
 
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect(('data.pr4e.org', 80)) # we connect across the website(web server) in the port 80 (like a phone call)
-cmd = 'GET https://data.pr4e.org/romeo.txt HTTP/1.1\n\n'.encode()# we encode the string through the network
+# cmd = 'GET https://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()# we encode the string through the network
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()# we encode the string through the network
 mysock.send(cmd) # we send the cmd socket through the network
 
 while True:#we create a loop 
