@@ -64,4 +64,48 @@ http://nmap.org/movies.html
 
 -An HTTP Request in Python-
 
+-Characters and Strings-
+
+ASCII(American Standard Code for Information Interchange)
+
+The characters that are in the West is telling us as the keys and 0 and are a lot of values(string uses in python)
+
+This are 8-bits(byte)
+
+-Representing Sumple Strings-
+
+*Each character is represented by a number between 9 and 256 stored in 8 bits of memory
+
+*We refere to "8 bits of memory as a "byte" of memory -(i-r my disk drive contains 3 Terabytes of memory)
+
+*The ord() function tells us  the numeric value of a simple ASCIII character
+
+Cheat-Sheet ASCII
+https://catonmat.net/ftp/ascii-cheat-sheet.png
+
+-Multi-Byte Characters-
+
+*To present the wide range of characters computers with more than one byte
+
+* UTF-16 - Fixed Length - Two bytes 
+
+* UTF-32 - Fixed Length - Four bytes 
+
+* UTF-8 - 1-4 bytes *(data commonly moved)
+
+ * Upwards compatible with ASCII - 1 Byte
+ * Automatic detection between ASCII and UTF-8
+ * UTF-8 is recommended practice for encoding data to be exchanged between systems
+
+-Two-Kinds-of-Strings-in-Python-
+
+*The python version 2 and the python verison 3 has his own differences
+
+-Python3-and-Unicode-
+
+*In Python3, all strings internally are UNICODE
+
+*Working with string variables in Python programs and reading data from files usually "just works"
+
+*When we talk to a network resource using sockets or talk to a database we have to encode and deocde data (usually to UTF-8)
 
