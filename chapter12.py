@@ -14,3 +14,5 @@ x = '書簡'
 print(type(x))
 x = u'書簡'
 print(type(x))
+print("Python Strings to Bytes")
+print("see http_request.py")

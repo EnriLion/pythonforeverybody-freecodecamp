@@ -109,3 +109,33 @@ https://catonmat.net/ftp/ascii-cheat-sheet.png
 
 *When we talk to a network resource using sockets or talk to a database we have to encode and deocde data (usually to UTF-8)
 
+print("\n")
+x = b'abc'
+print(type(x))
+x = '書簡'
+print(type(x))
+x = u'書簡'
+print(type(x))
+
+///////
+<class 'bytes'>
+<class 'str'>
+<class 'str'>
+
+-Python-Strings-to-Bytes-
+
+*When we talk to an external resource like a network socket we sends bytes, so we need to encode Python 3 strings into a given character encoding
+
+*When we read data from an external resource, we must decode it based on the caracter set so its properly repersented in Python 3 as a string.
+
+About bytes.decode:
+
+read the documentation
+
+https://docs.python.org/3/library/stdtypes.html?highlight=bytes%20decode#bytes.decode
+
+About str.encode:
+
+read the documentation
+
+https://docs.python.org/3/library/stdtypes.html?highlight=str%20encode#str.encode
