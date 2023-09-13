@@ -128,6 +128,33 @@ print(type(x))
 
 *When we read data from an external resource, we must decode it based on the caracter set so its properly repersented in Python 3 as a string.
 
+-urllib-
+
+A web browser in four lines 
+
+--Using urllin in Python--
+
+Since HTTP is so common, we have a library that does all the socket work for us and makes web pages look like a file
+
+import urllib.request, urllib.parse, urllib.error #import libraries
+
+fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt') # fhnad = is a library.library.function(string) and makes a conection and retrieves and return an almost file
+for line in fhand: # is going to read one life of the file
+    print(line.decode().strip()) #decode and print it.
+
+-Like-a-file-
+
+import urllib.request, urllib.parse, urllib.error
+
+fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+
+counts = dict()
+for line in fhand:
+    words = line.decode().split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+print(counts)
+
 About bytes.decode:
 
 read the documentation
