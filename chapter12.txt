@@ -146,14 +146,14 @@ for line in fhand: # is going to read one life of the file
 
 import urllib.request, urllib.parse, urllib.error
 
-fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt') # method.method.functionopenfile
 
-counts = dict()
-for line in fhand:
-    words = line.decode().split()
-    for word in words:
-        counts[word] = counts.get(word, 0) + 1
-print(counts)
+counts = dict() # we make a dictionary
+for line in fhand: # we read the file  in each line 
+    words = line.decode().split() #we add decode  because that line is not a string and we split each line
+    for word in words: # we make a loop to the word in each word
+        counts[word] = counts.get(word, 0) + 1 # we count each word
+print(counts) # and we print each word of the dictionary
 
 About bytes.decode:
 
@@ -166,3 +166,22 @@ About str.encode:
 read the documentation
 
 https://docs.python.org/3/library/stdtypes.html?highlight=str%20encode#str.encode
+
+
+-Reading Web Pages-
+
+import urllib.request, urllib.parse, urllib.error
+
+fhand = urllib.request.urlopen('http://www.dr-chuck.com/page1.htm')
+for line in fhand:
+  print(line.decode().strip())
+
+-The first liens of code @ Google?-
+
+-Parsing HTML(a.k.a Web Scraping)-
+
+Code Example
+
+urllin1.py
+urlwords.py
+
